@@ -1,6 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color:rgb(91, 96, 47);
+}
 .App {
   text-align: center;
 }
+.header-logo{
+  display: flex;
+  gap:1em;
+  align-items: center;
+  color:gray;
+}
+.header-title{
+  font-weight: 100;
+}
+.header{
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 1em;
+}
+.header .navbar ul{
+  display: flex;
+  gap:2em;
+} 
+
 
 .App-logo {
   height: 40vmin;
