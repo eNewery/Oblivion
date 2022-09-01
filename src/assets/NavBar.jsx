@@ -1,13 +1,15 @@
 import React from "react";
-import logo from "../img/farm.png"
+
 import "../App.css"
+import CartWidget from "./CartWidget";
+import Logo from "./Logo";
 
 let NavBar = () => {
 return(
 <div className="header">
-    <div className="header-logo"><h1 className="header-title">Fuel | Blockchain</h1> <img id="logo" width="50px" src={logo} alt="" /></div>
-    <nav className="navbar"><ul><li><a href="#">Shop</a></li>
-    <li><a href="#">Coins</a></li></ul></nav>
+    <div className="header-logo"><h1 className="header-title">Fuel | Blockchain</h1><Logo/> </div>
+    <nav className="navbar"><ul><li><a className="nav-link" href="#">Shop</a></li>
+    <li><a className="nav-link" href="#">Coins</a></li></ul> <CartWidget/></nav>
 </div>
 )
 }

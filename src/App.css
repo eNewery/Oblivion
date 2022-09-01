@@ -13,9 +13,17 @@
   gap:1em;
   align-items: center;
   color:gray;
+cursor:pointer;
+opacity: 0.5;
+transition: 1s;
 }
 .header-title{
   font-weight: 100;
+}
+
+.header-logo:hover{
+  opacity: 1;
+  transition: 1s;
 }
 .header{
 display: flex;
@@ -25,15 +33,45 @@ padding: 1em;
 }
 .header .navbar ul{
   display: flex;
-  gap:2em;
+  gap:1em;
 } 
-
-
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-link{
+transition: 1s;
+padding: 0.5em;
+border-radius:1em;
+opacity: 0.5;
+}
+.nav-link:hover{
+  transition: 1s;
+  opacity: 1;
+  font-size: 1.5em;
+}
+.logo{
+  transition: 1s;
+padding: 0.5em;
+border-radius:1em;
+opacity: 0.5;
+cursor: pointer;
+}
+.logo:hover{
+  transition: 1s;
+  opacity: 1;
+  font-size: 1.5em;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+.item-list-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
