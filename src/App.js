@@ -1,16 +1,19 @@
 
 import './App.css';
-import ItemListContainer from './assets/ItemListContainer';
 import NavBar from './assets/NavBar';
+import Shop from './assets/Shop';
+
+
+
 
 function App() {
 
-  const items = ["Pronto productos disponibles aquí"]
 
   return (
     <div>
 <NavBar/>
-<ItemListContainer productos={items}/>
+<Shop/>
+
     </div>
   );
 }

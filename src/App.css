@@ -5,9 +5,6 @@
   text-decoration: none;
   color:rgb(91, 96, 47);
 }
-.App {
-  text-align: center;
-}
 .header-logo{
   display: flex;
   gap:1em;
@@ -49,7 +46,6 @@ opacity: 0.5;
 .nav-link:hover{
   transition: 1s;
   opacity: 1;
-  font-size: 1.5em;
 }
 .logo{
   transition: 1s;
@@ -61,43 +57,108 @@ cursor: pointer;
 .logo:hover{
   transition: 1s;
   opacity: 1;
-  font-size: 1.5em;
 }
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 .item-list-container{
   display: flex;
   justify-content: center;
   align-items: center;
+gap:2em;
+flex-direction: column-reverse;
+  color:rgb(113, 198, 244);
+flex-wrap: wrap;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.item-count-list{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap:1em;
 }
 
-.App-link {
-  color: #61dafb;
+.item-count-container{
+  display: flex;
+  gap:0.8em;
+  flex-direction: column;
+width: 9em;
+align-items: center;
+justify-content: center;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+color:rgb(113, 198, 244);
+background-color: rgb(245, 245, 245);
+padding: 1em;
 }
+.item-count{
+  border-radius: 0.3em;
+  display: flex;
+justify-content: center;
+gap:3em;
+  align-items: center;
+width: 100%;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+border:1px solid gray;
+height: 2em;
+}
+span{
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  color: #535353;
+}
+.count-btn{
+  background-color: rgb(245, 245, 245);
+}
+.btn{
+  padding: 0.3em;
+  background-color: rgb(245, 245, 245);
+  border: none;
+  color:rgb(113, 198, 244);
+  cursor: pointer;
+}
+.buy-btn{
+  width: 9em;
+}
+.buy-btn button{
+  width: 100%;
+  border:1px solid rgb(113, 198, 244);
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition:1s;
+}
+.buy-btn button:hover{
+
+  background-color: rgb(113, 198, 244);
+  color:white;
+  transition:1s;
+}
+.stock{
+  text-align: center;
+  color:rgb(113, 198, 244);
+}
+.item-card{
+  padding: 2em;
+  background-color: rgb(245, 245, 245);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+@media all and (max-width:768px) {
+  .header-title{
+    font-size: 24px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media all and (max-width:768px) {
+  .header-title{
+    font-size: 24px;
+  }
+  #logo{
+    width: 35px;
+  }
+}
+@media all and (max-width:368px) {
+  .header-title{
+    font-size: 14px;
+  }
+  #logo{
+    width: 25px;
   }
 }
