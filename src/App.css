@@ -141,6 +141,41 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 }
+.card-para{
+  font-size: 12px;
+  font-weight: 400;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-title{
+  padding: 1em;
+}
+.btn-buy{
+  width: 200px;
+  margin: 0.5em;
+  border-radius: 1em;
+background:none;
+border:1px solid gray;
+transition:0.5s;
+cursor: pointer;
+}
+.btn-buy:hover{
+  background-color: gray;
+  color:white;
+  transition:0.5s;
+}
+.card-body{
+  border:0.5px solid gray;
+  border-radius: 1em;
+  margin: 1em;
+  padding: 1em;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media all and (max-width:768px) {
   .header-title{
     font-size: 24px;
