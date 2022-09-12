@@ -142,8 +142,8 @@ align-items: center;
 justify-content: center;
 }
 .card-para{
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight:700;
 }
 .row{
   display: flex;
@@ -157,9 +157,10 @@ justify-content: center;
   margin: 0.5em;
   border-radius: 1em;
 background:none;
-border:1px solid gray;
+border:2px solid gray;
 transition:0.5s;
 cursor: pointer;
+font-weight: 500;
 }
 .btn-buy:hover{
   background-color: gray;
@@ -167,7 +168,7 @@ cursor: pointer;
   transition:0.5s;
 }
 .card-body{
-  border:0.5px solid gray;
+  border:3px solid gray;
   border-radius: 1em;
   margin: 1em;
   padding: 1em;

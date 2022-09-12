@@ -5,8 +5,6 @@ import Shop from './assets/Shop';
 import  { BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from './assets/Home';
 
-
-
 function App() {
   return (
         <BrowserRouter>
