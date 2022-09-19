@@ -1,15 +1,13 @@
 import React from "react";
 import Item from "./Item";
-
 const ItemList = ({items}) => {
     return (
         <div className="row">
 {items.map(item => (
-    
-<Item nombre={item.title} imagen={item.image} precio={item.price}/>
-))}
 
-        </div>
+<Item id={item.id} nombre={item.title} imagen={item.image} precio={item.price}/>
+
+))}     </div>
     )
 }
 

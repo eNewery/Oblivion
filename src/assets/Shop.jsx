@@ -3,7 +3,9 @@ import ItemListContainer from "./ItemListContainer";
 
 const Shop = () =>{
     return (
+        <div className="shop">
         <ItemListContainer/>
+        </div>
     )
 }
 
