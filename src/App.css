@@ -82,9 +82,9 @@ flex-wrap: wrap;
 width: 9em;
 align-items: center;
 justify-content: center;
-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 color:rgb(113, 198, 244);
-background-color: rgb(245, 245, 245);
+
 padding: 1em;
 }
 .item-count{
@@ -99,21 +99,24 @@ border:1px solid gray;
 height: 2em;
 }
 span{
-
   color: #535353;
 }
 .count-btn{
-  background-color: rgb(245, 245, 245);
+
 }
 .btn{
   padding: 0.3em;
-  background-color: rgb(245, 245, 245);
   border: none;
   color:rgb(113, 198, 244);
   cursor: pointer;
+  background-color: white;
 }
 .buy-btn{
   width: 9em;
+}
+.price{
+  color:rgb(113, 198, 244);
+  font-size: 2em;
 }
 .buy-btn button{
   width: 100%;
@@ -177,9 +180,101 @@ font-weight: 500;
   justify-content: center;
   align-items: center;
 }
+.item-detail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:4em;
+}
+.title-detail{
+font-size: 2.5em;
+color:black;
+font-weight: 100;
+opacity: 0.3;
+transition: 0.5s;
+}
+.title-detail:hover{
+  opacity: 1;
+  transition: 0.5s;
+}
+.card-detail{
+  display: flex;
+  gap:1em;
+  justify-content: center;
+  align-items: center;
+}
+.img-detail{
+  transform: scale(0.9);
+  padding: 1em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 20em;
+  transition:1s;
+}
+.img-detail:hover{
+transform: scale(1);
+transition:1s;
+}
+.par-detail{
+  text-align: center;
+  margin: 1em;
+  font-size: 1.5em;
+}
+.description{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: end;
+}
+
 @media all and (max-width:768px) {
+  .item-detail{
+    padding: 1em;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  .title-detail{
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .item-count-container{
+width: 6em;
+  }
+  .item-count{
+gap:1.5em;
+  }
+#addToCart{
+
+}
+.stock{
+margin: 0.5em;
+}
+  .btn{
+
+  }
+  .buy-btn{
+width: 6em;
+  }
+  .price{
+font-size: 1.5em;
+  }
+  .buy-btn button{
+
+  }
+  .buy-btn button:hover{
+  
+  
+  }
   .header-title{
     font-size: 24px;
+  }
+  .description{
+    align-items: center;
+  }
+  .img-detail{
+    width: 10em;
+  }
+  .par-detail{
+    font-size: 1em;
   }
 }
 @media all and (max-width:768px) {

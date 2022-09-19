@@ -1,9 +1,10 @@
 import React from "react";
+import ItemDetailContainer from "./ItemDetailContainer";
 
 const Home = () =>{
     return (
         <div>
-<p>hola</p>
+
 
         </div>
     )

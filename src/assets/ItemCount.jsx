@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ItemCount = ({initial, stock}) => {
+const ItemCount = ({price, initial, stock}) => {
 const [count, setCount] = useState(initial)
 
 
@@ -10,7 +10,6 @@ const decrease = () =>{
 
 const increase = () =>{
     setCount(count + 1);
-
 }
 
     return(
@@ -22,8 +21,9 @@ const increase = () =>{
         </div>
         <div className="buy-btn">
             <button id="addToCart" className="btn">Add to Cart</button>
-            <p className="stock">({stock})</p>
+            <p className="stock">The actually stock is ({stock})</p>
             </div>
+            <p className="price">{price}$</p>
     </div>
 
     )
