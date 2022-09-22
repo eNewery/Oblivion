@@ -31,7 +31,13 @@ const onAdd = (quantity) => {
         <h3 className="cath-detail">Cath: {data.category}</h3>
         </div>
         <div className="description">
-        <ItemCount onAdd={onAdd} price={data.price} initial={1} stock={data.id}/>
+         {
+         goToCart   
+        ? <Link className="btn-finishbuy" to="/Cart">Terminar compra ({data.id})</Link> 
+
+        :<ItemCount onAdd={onAdd} price={data.price} initial={1} stock={data.id}/>
+              
+    }
         <p className="par-detail"> {data.description}</p>
         </div>
         </div>
