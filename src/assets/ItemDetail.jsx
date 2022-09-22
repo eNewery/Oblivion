@@ -1,10 +1,20 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+
 import ItemCount from "./ItemCount";
+import {useCartContext} from "../CartContext"
 import back from "../img/back.png"
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({data}) => {
+const [goToCart, setGoToCart] = React.useState(false)
+const {addProduct} = useCartContext()
+
+
+const onAdd = (quantity) => {
+    setGoToCart(true);
+    addProduct(data, quantity);
+}
+
 
     return(
 <div>
@@ -21,7 +31,7 @@ const ItemDetail = ({data}) => {
         <h3 className="cath-detail">Cath: {data.category}</h3>
         </div>
         <div className="description">
-        <ItemCount price={data.price} initial={1} stock={data.id}/>
+        <ItemCount onAdd={onAdd} price={data.price} initial={1} stock={data.id}/>
         <p className="par-detail"> {data.description}</p>
         </div>
         </div>

@@ -5,7 +5,7 @@ const Home = () =>{
         <div className="home">
 
             <h1 className="home-title">
-Welcome to Oblivion
+Welcome to Oblivion Store
 </h1>
 <button className="home-btn">Know more</button>
         </div>
