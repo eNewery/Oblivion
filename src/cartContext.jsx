@@ -9,9 +9,16 @@ export const useCartContext = () => React.useContext(CartContext)
 const CartProvider = ({children}) => {
 const [cart, setCart] = useState([])
 
-const addProduct = (item, newQuantity) => {
-const newCart = cart.filter(prod => prod.id !== item.id)
-newCart.push({...item, quantity: newQuantity });
+const addProduct = (item, stock) => {
+let newCart;
+let product = cart.find(product => product.id === item.id);
+if (product) {
+    product.stock +=stock;
+    newCart = [...cart];
+} else {
+    product = { ...item, stock: stock}
+    newCart = [...cart, product];
+}
 setCart(newCart)
 console.log(cart)
 }
@@ -19,7 +26,7 @@ console.log(cart)
 
 
 
-const clearCart = () => setCart()
+const clearCart = () => setCart([])
 
 const isInCart = (id) => cart.find(product => product.id === id) ? true : false;
 
