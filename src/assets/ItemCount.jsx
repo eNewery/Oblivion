@@ -12,7 +12,6 @@ const decrease = () =>{
 const increase = () =>{
     setCount(count + 1);
 }
-
     return(
     <div className="item-count-container">
         <div className="item-count">
@@ -22,10 +21,11 @@ const increase = () =>{
             <button disabled={count >= stock} onClick={increase} className="count-btn btn">+</button>
         </div>
         <div className="buy-btn">
-            <button onClick={onAdd} id="addToCart" className="btn">Add to Cart</button>
+            <input type="text" onClick={() => onAdd(count)} id="addToCart" className="btn"/>
+            {}
             <p className="stock">The actually stock is ({stock})</p>
             </div>
-            <button  className="btn-buy-2">${price}    </button>
+            <button  className="btn-buy-2">${price}</button>
     </div>
 
     )

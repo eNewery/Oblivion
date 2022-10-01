@@ -7,12 +7,12 @@ import { Link } from "react-router-dom";
 
 const ItemDetail = ({data}) => {
 const [goToCart, setGoToCart] = React.useState(false)
-const {addProduct} = useCartContext()
+const {addItem} = useCartContext()
 
 
 const onAdd = (quantity) => {
     setGoToCart(true);
-    addProduct(data, quantity);
+    addItem(data, quantity);
 }
 
 
@@ -33,10 +33,8 @@ const onAdd = (quantity) => {
         <div className="description">
          {
          goToCart   
-        ? <Link className="btn-finishbuy" to="/Cart">Terminar compra ({data.id})</Link> 
-
-        :<ItemCount onAdd={onAdd} price={data.price} initial={1} stock={data.id}/>
-              
+        ? <Link  className="btn-finishbuy" to="/Cart">Ir al carrito</Link> 
+        :<ItemCount onAdd={onAdd} price={data.price} initial={1} stock={data.stock}/>
     }
         <p className="par-detail"> {data.description}</p>
         </div>

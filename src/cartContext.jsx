@@ -9,20 +9,16 @@ export const useCartContext = () => React.useContext(CartContext)
 const CartProvider = ({children}) => {
 const [cart, setCart] = useState([])
 
-const addProduct = (item, stock) => {
-let newCart;
-let product = cart.find(product => product.id === item.id);
-if (product) {
-    product.stock +=stock;
-    newCart = [...cart];
-} else {
-    product = { ...item, stock: stock}
-    newCart = [...cart, product];
+const addItem = (item, cantidad) => {
+    if (isInCart(item.id)) {
+        let producto = cart.find(x => x.id === item.id);
+        cart[cart.indexOf(producto)].cantidad += cantidad;
+        setCart([...cart]);
+    } else {
+        setCart([...cart, {...item, cantidad:cantidad}]);            
+    }
+    console.log(cart)
 }
-setCart(newCart)
-console.log(cart)
-}
-
 
 
 
@@ -37,7 +33,7 @@ return(
     clearCart,
     isInCart,
     removeProduct,
-    addProduct
+    addItem
 }}>
 {children}
 </CartContext.Provider>
