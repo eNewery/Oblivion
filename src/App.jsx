@@ -7,6 +7,7 @@ import Home from './assets/Home';
 import CartProvider from './CartContext';
 import ItemDetailContainer from './assets/ItemDetailContainer';
 import Contact from './assets/Contact';
+import Cart from './assets/Cart';
 
 
 
@@ -20,7 +21,7 @@ function App() {
         <Route exact path="/Shop/:id" element={<ItemDetailContainer/>}/>
         <Route exact path="/Shop" element={<Shop/>}/>
         <Route exact path='/Contact' element={<Contact/>}/>
-        <Route exact path="/Cart"/>
+        <Route exact path="/Cart" element={<Cart/>}/>
         <Route exact path="/Cathegory"/>
         <Route exact path="/Detail"/>
         </Routes>

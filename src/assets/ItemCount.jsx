@@ -21,7 +21,7 @@ const increase = () =>{
             <button disabled={count >= stock} onClick={increase} className="count-btn btn">+</button>
         </div>
         <div className="buy-btn">
-            <input type="text" onClick={() => onAdd(count)} id="addToCart" className="btn"/>
+            <button type="text" onClick={() => onAdd(count)} id="addToCart" className="btn">Add to Cart</button>
             {}
             <p className="stock">The actually stock is ({stock})</p>
             </div>

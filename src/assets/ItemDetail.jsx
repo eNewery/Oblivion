@@ -33,13 +33,12 @@ const onAdd = (quantity) => {
         <div className="description">
          {
          goToCart   
-        ? <Link  className="btn-finishbuy" to="/Cart">Ir al carrito</Link> 
+        ? <Link  className="btn-finishbuy" to="/Cart">Go to Cart</Link> 
         :<ItemCount onAdd={onAdd} price={data.price} initial={1} stock={data.stock}/>
     }
         <p className="par-detail"> {data.description}</p>
         </div>
         </div>
-
     </div>
 </div>
     )

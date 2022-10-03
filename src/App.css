@@ -17,7 +17,17 @@ transition: 1s;
 .header-title{
   font-weight: 100;
 }
-
+.cart-noitems{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.cart-noitems p{
+  margin: 1em;
+  
+}
 .header-logo:hover{
   opacity: 1;
   transition: 1s;
@@ -296,9 +306,12 @@ width: 10em;
 .cart-para{
   position: absolute;
   transform: translateX(1em);
-padding: 0.1em;
+padding: 0.5em;
   background-color: red;
-  border-radius: 50px;
+  border-radius: 50%;
+  height: 0.5em;
+  display: flex;
+  align-items: center;
   
 }
 .cath-detail{
@@ -502,10 +515,82 @@ border-radius: 5em;
   box-shadow: rgba(99, 99, 99, 0.2) 2px 4px 16px 0px;
   transition:1s;
 }
-
-  
-
-
+.img-cart{
+ height: 12em;
+  width:148px;
+  padding: 1em;
+}
+.cart-title{
+font-size: 16px;
+}
+.cart-paragraph{
+font-size: 12px;
+}
+.item-cart{
+  display:flex;
+  align-items: center;
+  margin: 1em;
+  box-shadow:rgba(99, 99, 99, 0.2) 0px 4px 16px 0px;
+  animation-name:appear;
+  animation-duration:1s;
+  animation-fill-mode: both;
+  transition: 1s;
+  opacity: 0;
+}
+.btn-delete{
+  border-radius: 0.5em;
+  margin-top: 1em;
+  padding: 0.5em;
+  transition: 0.5s;
+  cursor: pointer;
+  border:none;
+  background: rgb(244, 244, 244); 
+transition: 1s;
+}
+.btn-delete:hover{
+  transition: 1s;
+  box-shadow:rgba(99, 99, 99, 0.2) 0px 4px 16px 0px;
+  transition: 0.5s;
+  cursor: pointer;
+  transform: translateY(-0.3em);
+}
+.btn-clean-container{
+display: flex;
+justify-content: center;
+}
+.btn-clean{
+  background: none;
+  border:none;
+  border-radius: 0.5em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 0.5em;
+  width: 10em;
+  transition: 0.5s;
+}
+.btn-clean:hover{
+  box-shadow:rgba(99, 99, 99, 0.2) 0px 4px 16px 0px;
+  transition: 0.5s;
+  cursor: pointer;
+  transform: translateY(-0.3em);
+}
+.btn-image{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.btn-image a{
+  transform: translateY(0.3em);
+  padding: 0.5em;
+  transition: 1s;
+  border-radius: 0.5em;
+}
+.btn-image a:hover{
+  box-shadow:rgba(99, 99, 99, 0.2) 0px 4px 16px 0px;
+  transition: 0.5s;
+  cursor: pointer;
+  transform: translateY(-0.3em);
+}
 @media all and (max-width:768px) {
   .extra-info{
 display: flex;
@@ -525,7 +610,9 @@ form{
   width: 100%;
 }
 
-
+.btn-image{
+flex-direction: column;
+}
 
   .item-detail{
     padding: 1em;
