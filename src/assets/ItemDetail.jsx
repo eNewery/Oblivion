@@ -17,31 +17,33 @@ const onAdd = (quantity) => {
 
 
     return(
-<div>
-    <div className="item-detail">
-        <div className="title-back">
-<Link to={"/Shop"}>
-            <img width={12} src={back} alt="" />
-            </Link>
-        <h3 className="title-detail">{data.title}</h3>
+        <div>
+            <div className="item-detail">
+                <div className="title-back">
+        <Link to={"/Shop"}>
+                    <img width={12} src={back} alt="" />
+                    </Link>
+                <h3 className="title-detail">{data.title}</h3>
+                </div>
+                <div className="card-detail">
+                    <div className="card-img">
+                <img className="img-detail" src={data.image} alt="" />
+                <h3 className="cath-detail">Cath: {data.category}</h3>
+                </div>
+                <div className="description">
+                 {
+                 goToCart   
+                ? <Link  className="btn-finishbuy" to="/Cart">Go to Cart</Link> 
+                :<ItemCount onAdd={onAdd} price={data.price} initial={1} stock={data.stock}/>
+            }
+                <p className="par-detail"> {data.description}</p>
+                </div>
+                </div>
+            </div>
         </div>
-        <div className="card-detail">
-            <div className="card-img">
-        <img className="img-detail" src={data.image} alt="" />
-        <h3 className="cath-detail">Cath: {data.category}</h3>
-        </div>
-        <div className="description">
-         {
-         goToCart   
-        ? <Link  className="btn-finishbuy" to="/Cart">Go to Cart</Link> 
-        :<ItemCount onAdd={onAdd} price={data.price} initial={1} stock={data.stock}/>
-    }
-        <p className="par-detail"> {data.description}</p>
-        </div>
-        </div>
-    </div>
-</div>
-    )
+            )
+
+
     }
 
     export default ItemDetail

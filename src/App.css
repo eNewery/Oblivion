@@ -22,7 +22,7 @@ transition: 1s;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 70vh;
 }
 .cart-noitems p{
   margin: 1em;
@@ -105,7 +105,6 @@ gap:3em;
   align-items: center;
 width: 100%;
 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-border:1px solid gray;
 height: 2em;
 }
 span{
@@ -392,15 +391,16 @@ form{
   display: flex;
   flex-direction: column;
  gap: 1em;
-  margin-left: 1em;
   background-color: #eff0f4;
-  border: 3px solid #c9d3dd;
+  margin: 1em;
 border-bottom-left-radius: 0.4em;
 border-top-left-radius: 0.4em;
   padding: 1em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .form-title{
   color:#3b4754;
+  font-weight: 400;
 }
 .form-inputs-1{
   display: flex;
@@ -418,6 +418,8 @@ text-align: center;
 }
 label{
   color: #3b4754;
+  font-weight: 100;
+  padding: 0.5em;
 }
 .form-input-2{
 display: flex;
@@ -426,6 +428,7 @@ border: 1px solid #c9d3dd;
 }
 .form-desc{
   color:#798da3;
+  text-align: center;
 }
 .form-inputs{
  display: flex;
@@ -464,8 +467,8 @@ font-size: 0.7em;
 .extra-info{
 border-top-right-radius: 0.4em;
 border-bottom-right-radius: 0.4em;
-  background-color:#eff0f4;
-  border: 3px solid #c9d3dd;
+  background-color:#f5f6f9;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .extra-title{
 
@@ -564,8 +567,11 @@ justify-content: center;
   border-radius: 0.5em;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 0.5em;
+  text-align: center;
+  margin: 0.5em;
   width: 10em;
   transition: 0.5s;
+  font-weight: 100;
 }
 .btn-clean:hover{
   box-shadow:rgba(99, 99, 99, 0.2) 0px 4px 16px 0px;
@@ -576,7 +582,7 @@ justify-content: center;
 .btn-image{
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
 }
 .btn-image a{
@@ -590,6 +596,99 @@ justify-content: center;
   transition: 0.5s;
   cursor: pointer;
   transform: translateY(-0.3em);
+}
+.dissapear-cart{
+  animation-name: dissapear;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes dissapear {
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}
+
+
+.total-container{
+display: flex;
+justify-content: space-around;
+}
+
+.total-text{
+  box-shadow:rgba(99, 99, 99, 0.2) 0px 4px 16px 0px;
+  padding: 1em;
+ display: block;
+  margin: 1em;
+}
+.btn-buy{
+  box-shadow:rgba(99, 99, 99, 0.2) 0px 4px 16px 0px;
+  padding: 1em;
+  margin: 1em;
+display: block;
+font-weight: 400;
+}
+.cathegory{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cathegory a{
+  padding: 0.4em;
+  border-radius: 0.2em;
+  font-weight: 100;
+  font-size: 32px;
+transition: 0.5s;
+margin: 0.2em;
+}
+.cathegory a:hover{
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+.btn-cath-container{
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+.btn-cath{
+  padding: 0.5em;
+  width: 10em;
+  background: none;
+border:none;
+  border-radius: 0.5em;
+  transition: 0.5s;
+  cursor: pointer;
+  box-shadow:rgba(99, 99, 99, 0.2) 0px 4px 16px 0px; 
+}
+.btn-cath:hover{
+scale: 1.5;
+  transition: 0.5s;
+}
+#addToCart {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: none;
+}
+.back-cath{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+flex-direction: column;
+}
+.back-cath h1{
+  font-weight: 100;
+}
+.back-cath a{
+  display: flex;
+  gap: 1em;
+  box-shadow:rgba(99, 99, 99, 0.2) 0px 4px 16px 0px;
+  padding: 1em;
+}
+.back-cath a img{
+
+}
+.back-cath p{
+
 }
 @media all and (max-width:768px) {
   .extra-info{
@@ -607,7 +706,7 @@ align-items: center;
 width: 100%;
 }
 form{
-  width: 100%;
+width: 89%;
 }
 
 .btn-image{

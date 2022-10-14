@@ -13,8 +13,9 @@ const Item = ({id, nombre, imagen, precio}) => {
                 <NavLink to={`/Shop/${id}`}>
                 <img width={148} src={imagen} alt="" />
                 </NavLink>
+                <div className="btn-buy-container">
                 <button className="btn-buy">${precio}</button>
-                
+                </div>
             </div>
         </div>
      

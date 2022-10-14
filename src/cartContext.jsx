@@ -1,7 +1,4 @@
 import React, {createContext, useState} from "react";
-
-
-
 export const CartContext = createContext([])
 export const useCartContext = () => React.useContext(CartContext)
 
@@ -16,7 +13,9 @@ setCart(newCart)
 }
 console.log("carrito: ", cart)
 
-
+const totalPrice = () => {
+return cart.reduce((prev, act) => prev + act.quantity * act.price, 0)
+}
 
 const clearCart = () => setCart([])
 
@@ -26,6 +25,7 @@ const removeProduct = (id) => setCart(cart.filter(product => product.id !== id))
 
 return(
 <CartContext.Provider value={{
+    totalPrice,
     clearCart,
     isInCart,
     removeProduct,
