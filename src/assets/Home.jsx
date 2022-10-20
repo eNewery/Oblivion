@@ -7,7 +7,7 @@ const Home = () =>{
             <h1 className="home-title">
 Welcome to Oblivion Store
 </h1>
-<button className="home-btn">Know more</button>
+<Link to={"/Shop"} className="home-btn">Know more</Link>
 </div>
 
        <Link className="btn-1" to={"/Admin"}>Go To AdminPanel</Link>
